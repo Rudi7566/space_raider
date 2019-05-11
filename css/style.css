@@ -177,6 +177,16 @@ box-shadow: 0px 0px 21px -1px rgba(24,228,234,1);
 #gameMenu button a{
   color: #18e4ea; 
 }
+#stats{
+  display: flex;
+  font-family: 'Righteous', cursive;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  color: #18e4ea;
+  background: #0c0c0c;
+  width: 100%;
+}
 #gameMenu button{
   color: #18e4ea;
   border: none;

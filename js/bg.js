@@ -7,6 +7,7 @@ window.onload = function(){
     var red = 20;
     var green = 10;
     var counter = 0;
+    
     function colorChange(){
      if(counter <= 50){
         red += 3;
@@ -28,8 +29,7 @@ window.onload = function(){
 
       if(!gameOver){
         score++;
-
-
+        document.getElementById("score").innerHTML = score;
       }
         
 

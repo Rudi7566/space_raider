@@ -3,14 +3,20 @@ var myObstacles = [];
 
 function startGame() {
     myGameArea.start();
-    var pHeight = 80;
-    var pWidth = 80;
+    var pHeight = 60;
+    var pWidth = 60;
+
+    score = 0;
 
     myGamePiece = new component(pWidth, pHeight, "./assets/player/starship.png", window.innerWidth/2-pWidth/2, window.innerHeight-pHeight-10, "image");
 
     var btn = document.getElementById("gameMenu");
     btn.classList.add("hidden");
     // btn.classList.remove("hidden");
+
+    var sts = document.getElementById("stats");
+    // sts.classList.add("hidden");
+    sts.classList.remove("hidden");
 }
 
 var myGameArea = {
@@ -84,13 +90,26 @@ function component(width, height, color, x, y, type) {
         var otherright = otherobj.x + (otherobj.width);
         var othertop = otherobj.y;
         var otherbottom = otherobj.y + (otherobj.height);
+        
+        
         var crash = true;
+
+
+        
         if ((mybottom < othertop) ||
         (mytop > otherbottom) ||
         (myright < otherleft) ||
         (myleft > otherright)) {
-          crash = false;
+        crash = false;  
         }
+
+        if (crash && health>0){
+            crash = false; 
+            health--;  
+
+        }
+
+        document.getElementById("health").innerHTML = health;
         gameOver = crash;
         return crash;
       }   

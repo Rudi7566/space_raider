@@ -30,6 +30,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
 
 
+    <div id="stats" class="hidden justify-content-between background-black p-2">
+        <div class="pl-4">
+            <span>Score: <span  id = "score"></span></span>
+        </div>
+
+        <div class="pr-4">
+            <span>Health: <span id = "health"></span></span>
+        </div>
+
+    </div>
+
     <div id="gameMenu">
 
         
