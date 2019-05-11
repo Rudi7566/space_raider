@@ -1,0 +1,225 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Righteous', cursive;
+  color: #333;
+  overflow-x: hidden;
+}
+a{
+  color: #333;
+  transition: .3s all ease;
+}
+a:active{
+  color: #333;
+  text-decoration: none;
+  transition: .3s all ease;
+}
+a:hover{
+  transition: .3s all ease;
+  text-decoration: none;
+  color: #18e4ea;
+  text-shadow: 0px 0px 5px #18e4ea;
+}
+nav{
+  border-bottom: 1px solid #b7b7b7;
+  z-index: 23;
+  background-color: #f4f4f4;
+}
+.help-block{
+  color: red;
+  display: block;
+}
+.ls-btn-cust{
+  position: fixed;
+  top: 6rem;
+  right: -3rem;
+  padding: 0.5rem 4rem 0.5rem 1rem;
+  border: 1px solid #b7b7b7;
+  border-radius: 1rem;
+  background-color: #f4f4f4;
+}
+.background{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+.hidden{
+  display: none !important;
+}
+#loadingScreen{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.parallax h2::after{
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,137,137,0) 100%); 
+}
+.parallax-end h2::after{
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,137,137,0) 100%); 
+}
+.parallax-end h2{
+  padding-top: 7rem;
+  text-shadow: 0px 0px 5px #333;
+}
+.input{
+  border: none ;
+  border-bottom: 1px solid #333 ;
+}
+.input:focus {
+  outline: none !important;
+  border-bottom: 1px solid #18e4ea !important;
+}
+h2::after{
+  content: '';
+  display: block;
+  background: linear-gradient(to right, rgb(2, 1, 1) 0%,rgba(255,137,137,0) 100%);
+  width: 100%;
+  height: 2px;
+  margin-top: 8px;
+}
+.start-now{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+.start-game .start-now{
+ bottom: 0rem
+}
+.i-grid{
+  height: 100%;
+}
+.parallax { 
+   background-image: url("../assets/background/space.jpg");
+
+   height: 500px; 
+ 
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.parallax-end { 
+  background-image: url("../assets/background/spaceend.jpg");
+
+  height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#loadingScreen{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c;
+  top: 0;
+  left: 0;
+}
+#gameMenu{
+  width: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.i-grid-item {
+  float: left;
+  width: 300px;
+  height: 300px;
+  background: #e6e5e4;
+  border: 2px solid #b6b5b4;
+}
+img{
+  width: inherit;
+  height: inherit;
+}
+
+.i-grid-item--width2 { width: 500px; }
+.i-grid-item--width1 { width: 200px; }
+.i-grid-item--height2 { height: 500px; }
+
+
+#gameMenu .container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 3% 10%;
+background-color: rgba(12,12,12,0.8);
+border-radius: 25px;
+border: 2px solid #18e4ea;
+box-shadow: 0px 0px 21px -1px rgba(24,228,234,1);
+}
+#gameMenu h1{
+  margin-bottom: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #F4F4F4;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 15px, #18e4ea 0px 0px 20px;
+}
+#gameMenu button a{
+  color: #18e4ea; 
+}
+#gameMenu button{
+  color: #18e4ea;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  padding: 15px 0;
+}
+#gameMenu button::after{
+  content: '';
+  display: block;
+  background-color: #18e4ea;
+  height: 2px;
+  width: 0px;
+  transition: 0.5s ease;
+}
+#gameMenu button:hover::after{
+  width: 100%;
+  transition: 0.5s ease;
+}
+#gameMenu button::before{
+  content: '';
+  display: flex;
+  background-color: #18e4ea;
+  height: 2px;
+  width: 0px;
+  transition: 0.5s ease;
+  align-self: flex-end;
+}
+#gameMenu button:hover::before{
+  width: 100%;
+  transition: 0.5s ease;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px){
+
+  #gameMenu h1{
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+}
